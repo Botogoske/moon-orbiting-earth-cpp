@@ -4,11 +4,13 @@
 #include <memory>
 #include <cmath>
 
-class Particles {
-  public:
-    struct Particle {
-      sf::Vector2f velocity;
-      int lifetime;
+class Particles
+{
+public:
+    struct Particle
+    {
+        sf::Vector2f velocity;
+        int lifetime;
     };
 
     std::shared_ptr<sf::RenderWindow> window;
@@ -17,7 +19,7 @@ class Particles {
     float size;
     std::size_t count;
 
-    const double pi {3.14f}, radius {70.f};
+    const double pi{3.14f}, radius{70.f};
     double angle, x, y, frame1, frame2;
     sf::CircleShape earth, moon;
     sf::Texture t1, t2, t3;
